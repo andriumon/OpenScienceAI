@@ -1,0 +1,29 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: 'PDF Processing '
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Andrés
+    family-names: Montero Martín
+    email: andres.montero.martin@alumnos.upm.es
+    affiliation: UPM Student
+  - {}
+repository-code: 'https://github.com/andriumon/OpenScienceAI.git'
+abstract: >-
+  Software that processes papers in PDF format by calling
+  Grobid's web service and makes a wordcloud for each of
+  them as well as giving a graph indicating the number of
+  figures per article and a list of links found in all of
+  them.
+keywords:
+  - pdf
+  - processing
+  - grobid
+license: MIT
+version: 1.0.0
+date-released: '2023-03-08'
