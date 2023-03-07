@@ -16,8 +16,6 @@ This build has been developed on Python 3.10 and should work with higher version
 2. Create a folder called "pdfs" and put inside the papers you want to process
 3. Install [Grobid's Python Client](https://github.com/kermitt2/grobid_client_python)
 4. Go to the src folder and run the script
-> cd src  
-> py pdfProcessing.py  
 
 You can check the results in the folders "wordclouds", "figures" and "links", which will be created in the directory after you run the script.
 
