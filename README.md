@@ -14,8 +14,8 @@ Papers used for input must have an abstract section or the software will fail
 2. Create a folder called "pdfs" and put inside the papers you want to process
 3. Install [Grobid's Python Client](https://github.com/kermitt2/grobid_client_python)
 4. Go to the src folder and run the script
->> `git clone `
->> `cd src`
->> `py pdfProcessing.py`
+> git clone
+> cd src
+> py pdfProcessing.py
 
 You can check the results in the folders wordclouds, figures and links, which will be created after you run the script.
