@@ -19,6 +19,10 @@ This build has been developed on Python 3.10 and should work with higher version
 
 You can check the results in the folders "wordclouds", "figures" and "links", which will be created in the directory after you run the script.
 
+## Readthedocs
+
+[![Documentation Status](https://readthedocs.org/projects/openscienceai/badge/?version=latest)](https://openscienceai.readthedocs.io/en/latest/?badge=latest)
+
 ## Contact
 
 Main author and contact: andres.montero.martin@alumnos.upm.es
