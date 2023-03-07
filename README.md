@@ -19,4 +19,8 @@ This build has been developed on Python 3.10 and should work with higher version
 > cd src  
 > py pdfProcessing.py  
 
-You can check the results in the folders "wordclouds", "figures" and "links", which will be created after you run the script.
+You can check the results in the folders "wordclouds", "figures" and "links", which will be created in the directory after you run the script.
+
+## Contact
+
+Main author and contact: andres.montero.martin@alumnos.upm.es
