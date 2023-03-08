@@ -9,13 +9,13 @@ The software has been tested with 9 papers from Google Scholar and works properl
   
 ## Results
 
-[![Example figure 1](/assets/pdfsExample.png)]
+![Example figure 1](/assets/pdfsExample.png)
 
 ### Wordcloud
 
 As shown here, you can see that a wordcloud has been created for each pdf file given as input
 
-[![Example figure 2](/assets/wcExample.png)]
+![Example figure 2](/assets/wcExample.png)
 
 
 ### Graphic
@@ -23,7 +23,7 @@ As shown here, you can see that a wordcloud has been created for each pdf file g
 In this image, you can see the bar graphic created by the software. Paper5, which is the nectin_analysis pdf from the image showed above, has only 2 figures that
 are marked with the \<figure\> tag in its TEI file
 
-[![Example figure 3](/assets/figsPerArticle.png)]
+![Example figure 3](/assets/figsPerArticle.png)
 
 
 ### List of links
