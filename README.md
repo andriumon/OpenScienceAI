@@ -16,16 +16,17 @@ Check the dependencies folder so you can reproduce the environment in which the 
 
 ## Instructions
 
-1. Copy this repo in whichever directory you like
-2. Create a folder called "pdfs" and put inside the papers you want to process
-3. Install [Grobid's Python Client](https://github.com/kermitt2/grobid_client_python)
-4. Go to the src folder and run the script
+1. Copy this repo
+2. Go to the repo and then to the src directory
+2. Create a folder called "pdfs" in said directory and put inside the papers you want to process
+3. Install [Grobid's Python Client](https://github.com/kermitt2/grobid_client_python) there
+4. Run the script
 
 You can check the results in the folders "wordclouds", "figures" and "links", which will be created in the directory after you run the script.
 
 ## Workflow
 
-![The San Juan Mountains are beautiful!](/workflow/workflow.png "Software's Workflow")
+![This is a total mess!](/assets/workflow.png "Software's Workflow")
 
 ## Readthedocs
 
