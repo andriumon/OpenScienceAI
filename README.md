@@ -1,6 +1,7 @@
 # PDF Processing Software
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7708015.svg)](https://doi.org/10.5281/zenodo.7708015)
+[![Documentation Status](https://readthedocs.org/projects/openscienceai/badge/?version=latest)](https://openscienceai.readthedocs.io/en/latest/?badge=latest)
 
 ## Description
 
@@ -31,10 +32,6 @@ You can check the results in the folders "wordclouds", "figures" and "links", wh
 ## Workflow
 
 ![This is a total mess!](/assets/workflow.png "Software's Workflow")
-
-## Readthedocs
-
-[![Documentation Status](https://readthedocs.org/projects/openscienceai/badge/?version=latest)](https://openscienceai.readthedocs.io/en/latest/?badge=latest)
 
 ## Contact
 
