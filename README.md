@@ -10,9 +10,13 @@ Software that processes papers in PDF format by calling Grobid's web service and
 
 Papers used for input must have an abstract section or the software will fail.
 
+### Dependencies
+
 This build has been developed on Python 3.10 and should work with higher versions.
 
-Check the dependencies folder so you can reproduce the environment in which the software was developed.
+Python libraries matplotlib and wordcloud must be previously installed.
+
+Check the [dependencies file](/dependencies/dependencies.txt) for a more extense list of dependencies of the environment in which the software was developed.
 
 ## Instructions
 
