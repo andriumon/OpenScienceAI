@@ -1,5 +1,7 @@
 # PDF Processing Software
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7708015.svg)](https://doi.org/10.5281/zenodo.7708015)
+
 ## Description
 
 Software that processes papers in PDF format by calling Grobid's web service and makes a wordcloud for each of them as well as giving a graph indicating the number of figures per article and a list of links found in all of them.
