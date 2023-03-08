@@ -12,6 +12,8 @@ Papers used for input must have an abstract section or the software will fail.
 
 This build has been developed on Python 3.10 and should work with higher versions.
 
+Check the dependencies folder so you can reproduce the environment in which the software was developed.
+
 ## Instructions
 
 1. Copy this repo in whichever directory you like
@@ -20,6 +22,10 @@ This build has been developed on Python 3.10 and should work with higher version
 4. Go to the src folder and run the script
 
 You can check the results in the folders "wordclouds", "figures" and "links", which will be created in the directory after you run the script.
+
+## Workflow
+
+![The San Juan Mountains are beautiful!](/workflow/workflow.png "Software's Workflow")
 
 ## Readthedocs
 
