@@ -28,11 +28,13 @@ Dependencies can be found [here](/dependencies/dependencies.txt) to use them to 
 
 You can install [Conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html) to easily install all the dependencies needed on an environment(recommended)
 
+If you don't want to use Conda then skip step 3 from the Instructions segment
+
 ## Instructions
 
 1. Copy this repo
 ```console
-git clone  
+git clone https://github.com/andriumon/OpenScienceAI.git
 ```
 2. Go to the repo and then to the src directory
 ```console
@@ -45,14 +47,18 @@ conda activate newenv
 python3 -m pip install --upgrade pip  
 pip install -r dependencies.txt
 ```
-**Note:** If python3 doesn't work, try py
-5. Create a folder called "pdfs" in the src directory and put inside all the papers you want to process
-6. Install [Grobid's Python Client](https://github.com/kermitt2/grobid_client_python) there
-7. Run Grobid with Docker
+**Note:** If python3 doesn't work, try py  
+
+4. Create a folder called "pdfs" in the src directory and put inside all the papers you want to process
+5. Install [Grobid's Python Client](https://github.com/kermitt2/grobid_client_python) there
+6. Run Grobid with Docker
 ```console
 docker run -t --rm -p 8070:8070 lfoppiano/grobid:0.7.2
 ```
-8. Run the script
+7. Run the script
+```console
+python3 pdfProcessing.py
+```
 
 You can check the results in the folders "wordclouds", "figures" and "links", which will be created in the directory after you run the script.
 
