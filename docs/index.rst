@@ -105,7 +105,7 @@ Contact
 
 Main author and contact: andres.montero.martin@alumnos.upm.es
 
-.. |DOI| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7708015.svg
-   :target: https://doi.org/10.5281/zenodo.7708015
+.. |DOI| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7709835.svg
+   :target: https://doi.org/10.5281/zenodo.7709835
 .. |Documentation Status| image:: https://readthedocs.org/projects/openscienceai/badge/?version=latest
    :target: https://openscienceai.readthedocs.io/en/latest/?badge=latest
