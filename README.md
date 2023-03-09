@@ -40,7 +40,7 @@ git clone https://github.com/andriumon/OpenScienceAI.git
 ```console
 cd OpenScienceAI/src 
 ```
-3. Install dependencies or use Conda to do it with
+3. Install dependencies or copy the dependencies file to the src directory and use Conda to do it with
 ```console
 conda create -n newenv  
 conda activate newenv  
@@ -64,7 +64,7 @@ You can check the results in the folders "wordclouds", "figures" and "links", wh
 
 ## Workflow
 
-![This is a total mess!](/assets/workflow.png "Software's Workflow")
+![This is a total mess](/assets/workflow.png "Software's Workflow")
 
 ## Contact
 
