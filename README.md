@@ -1,6 +1,6 @@
 # PDF Processing Software
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7708015.svg)](https://doi.org/10.5281/zenodo.7708015)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7709835.svg)](https://doi.org/10.5281/zenodo.7709835)
 [![Documentation Status](https://readthedocs.org/projects/openscienceai/badge/?version=latest)](https://openscienceai.readthedocs.io/en/latest/?badge=latest)
 
 ## Description
