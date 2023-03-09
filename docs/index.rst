@@ -14,8 +14,14 @@ in all of them.
 Requirements
 ------------
 
-Papers used for input must have an abstract section or the software will
-fail.
+-  Papers used for input must have an abstract section or the software
+   will fail.
+-  `Docker <https://www.docker.com/>`__ must be installed
+-  Download the Grobid docker image with
+
+.. code:: console
+
+   docker pull lfoppiano/grobid:0.7.2
 
 Dependencies
 ~~~~~~~~~~~~
@@ -25,20 +31,62 @@ versions.
 
 Python libraries matplotlib and wordcloud must be previously installed.
 
-Check the `dependencies file </dependencies/dependencies.txt>`__ for a
-more extense list of dependencies of the environment in which the
-software was developed.
+Dependencies can be found `here </dependencies/dependencies.txt>`__ to
+use them to build the environment with Conda
+
+Conda
+~~~~~
+
+You can install
+`Conda <https://conda.io/projects/conda/en/latest/user-guide/install/index.html>`__
+to easily install all the dependencies needed on an
+environment(recommended)
+
+If you don’t want to use Conda then skip step 3 from the Instructions
+segment
 
 Instructions
 ------------
 
 1. Copy this repo
+
+.. code:: console
+
+   git clone https://github.com/andriumon/OpenScienceAI.git
+
 2. Go to the repo and then to the src directory
-3. Create a folder called “pdfs” in said directory and put inside the
-   papers you want to process
-4. Install `Grobid’s Python
+
+.. code:: console
+
+   cd OpenScienceAI/src 
+
+3. Install dependencies or copy the dependencies file to the src
+   directory and use Conda to do it with
+
+.. code:: console
+
+   conda create -n newenv  
+   conda activate newenv  
+   python3 -m pip install --upgrade pip  
+   pip install -r dependencies.txt
+
+**Note:** If python3 doesn’t work, try py
+
+4. Create a folder called “pdfs” in the src directory and put inside all
+   the papers you want to process
+5. Install `Grobid’s Python
    Client <https://github.com/kermitt2/grobid_client_python>`__ there
-5. Run the script
+6. Run Grobid with Docker
+
+.. code:: console
+
+   docker run -t --rm -p 8070:8070 lfoppiano/grobid:0.7.2
+
+7. Run the script
+
+.. code:: console
+
+   python3 pdfProcessing.py
 
 You can check the results in the folders “wordclouds”, “figures” and
 “links”, which will be created in the directory after you run the
@@ -50,7 +98,7 @@ Workflow
 .. figure:: /assets/workflow.png
    :alt: Software's Workflow
 
-   This is a total mess!
+   This is a total mess
 
 Contact
 -------
