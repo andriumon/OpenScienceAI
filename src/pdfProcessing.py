@@ -5,23 +5,30 @@ from wordcloud import WordCloud, STOPWORDS
 import matplotlib.pyplot as pyplot
 
 
-#DONE
+
+def checkPDF(currentPath):
+    for pdf in os.listdir(currentPath+'/pdfs'):
+        ext = pdf.split('.')
+        if ext[1] != 'pdf':
+            print('Error: there is a file that is not a pdf')
+            return False
+    return True
+
+
 def keywordClouds(currentPath):
 
-    '''Se configuran las stopwords para la wordcloud'''
+    '''Stopwords config for wordcloud'''
 
     stopwords = STOPWORDS
     stopwords.add('et')
     stopwords.add('al')
 
 
-    '''Se crea la carpeta en la que se guardaran los wordclouds si no existe ya'''
+    '''If wordclouds folder doesn't exist, it gets created'''
 
     if not(os.path.exists(currentPath+'/wordclouds')):
         os.mkdir(currentPath+'/wordclouds')
 
-
-    '''Algoritmo para crear una wordcloud por cada xml que ha devuelto Grobid'''
 
     for xml in os.listdir(currentPath+'/papers'):
         tree = ET.parse(currentPath+'/papers/'+xml)
@@ -35,14 +42,13 @@ def keywordClouds(currentPath):
             wc.to_file(currentPath+'/wordclouds/'+xml+'_keyword_cloud.png')
 
 
-#DONE
 def figuresPerArticle(currentPath):
     y = []
     x = []
     i = 1
 
 
-    '''Se crea la carpeta en la que se guardaran las graficas si no existe ya'''
+    '''If figures folder doesn't exist, it gets created'''
 
     if not(os.path.exists(currentPath+'/figures')):
         os.mkdir(currentPath+'/figures')
@@ -62,10 +68,9 @@ def figuresPerArticle(currentPath):
     pyplot.savefig(currentPath+'/figures/figsPerArticle.png')
 
 
-
 def listOfLinks(currentPath):
 
-    '''Se crea la carpeta en la que se guardaran los links si no existe ya'''
+    '''If links folder doesn't exist, it gets created'''
 
     if not(os.path.exists(currentPath+'/links')):
         os.mkdir(currentPath+'/links')
@@ -80,7 +85,7 @@ def listOfLinks(currentPath):
             splitText = text.split()
             for word in splitText:
                 if 'https://' in word:
-                    if word[-1] is '.':
+                    if word[-1] == '.':
                         new_word = word.replace(word[-1], '')
                         linkList.append(new_word)
                     else:
@@ -94,27 +99,23 @@ def listOfLinks(currentPath):
 #SCRIPT
 currentPath = os.getcwd()
 
-'''Se comprueba que todos los archivos del input sean pdfs'''
+'''Check if all the files are in pdf format'''
 
-for pdf in os.listdir(currentPath+'/pdfs'):
-    ext = pdf.split('.')
-    if ext[1] is not 'pdf':
-        print('Error: there is a file that is not a pdf')
-        exit()
+if(checkPDF(currentPath)):
 
-'''Se comprueba si hay creada ya una carpeta papers en la que guardar los xmls'''
+    '''If papers folder doesn't exist, it gets created'''
 
-if not(os.path.exists(currentPath+'/papers')):
-    os.mkdir(currentPath+'/papers')
+    if not(os.path.exists(currentPath+'/papers')):
+        os.mkdir(currentPath+'/papers')
 
 
-'''Se llama al cliente, pasandole como input el directorio en el que estan los papers(pdf)
-   y output el directorio que utilizará el script para coger los xmls que devuelve Grobid''' 
+    '''Service request, input id the directory in which the pdfs are stored, output is the papers folder which
+    will be used later as an input for the processing''' 
 
-client = GrobidClient(config_path='./grobid_client_python/config.json')
-client.process('processFulltextDocument', currentPath+'/pdfs', currentPath+'/papers', n=20)
+    client = GrobidClient(config_path='./grobid_client_python/config.json')
+    client.process('processFulltextDocument', currentPath+'/pdfs', currentPath+'/papers', n=20)
 
 
-keywordClouds(currentPath)
-figuresPerArticle(currentPath)
-listOfLinks(currentPath)
+    keywordClouds(currentPath)
+    figuresPerArticle(currentPath)
+    listOfLinks(currentPath)
